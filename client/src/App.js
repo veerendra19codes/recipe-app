@@ -13,10 +13,10 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/createrecipes" element={ <CreateRecipes /> } />
-          <Route path="/savedrecipes" element={ <SavedRecipes /> } />
-          <Route path="/auth" element={ <Auth /> } />
+          <Route path="https://recipe-app-steel-beta.vercel.app/" element={ <Home /> } />
+          <Route path="https://recipe-app-steel-beta.vercel.app/createrecipes" element={ <CreateRecipes /> } />
+          <Route path="https://recipe-app-steel-beta.vercel.app/savedrecipes" element={ <SavedRecipes /> } />
+          <Route path="https://recipe-app-steel-beta.vercel.app/auth" element={ <Auth /> } />
 
         </Routes>
       </Router>

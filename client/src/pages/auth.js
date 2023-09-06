@@ -29,7 +29,7 @@ const Login = () => {
 
         try{
 
-            const response = await axios.post("http://localhost:3001/auth/login", {
+            const response = await axios.post("https://recipe-app-steel-beta.vercel.app/auth/login", {
                 username,
                 password,
             });
@@ -39,7 +39,7 @@ const Login = () => {
             //getting userID 
             window.localStorage.setItem("userID", response.data.userID);
             //navigate to home page whener user logs in
-            navigate("/");
+            navigate("https://recipe-app-steel-beta.vercel.app/");
 
         } catch(err) {
             console.error(err);
@@ -69,7 +69,7 @@ const Register = () => {
 
         try{
             //syntax: await axios.post(url , object);
-            await axios.post("http://localhost:3001/auth/register", {
+            await axios.post("https://recipe-app-steel-beta.vercel.app/auth/register", {
                 //object for the body for the request
                 username,
                 password,
