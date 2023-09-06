@@ -6,7 +6,7 @@ import { verifyToken } from "./users.js";
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("https://recipe-app-steel-beta.vercel.app/", async (req, res) => {
     try{
         const response = await RecipeModel.find({});
         res.json(response);
@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.post("/", verifyToken ,async (req, res) => {
+router.post("https://recipe-app-steel-beta.vercel.app/", verifyToken ,async (req, res) => {
     const recipe = new RecipeModel(req.body);
     try{
         const response = await recipe.save();
@@ -25,7 +25,7 @@ router.post("/", verifyToken ,async (req, res) => {
     }
 });
 
-router.put("/", verifyToken ,async(req, res) => {
+router.put("https://recipe-app-steel-beta.vercel.app/", verifyToken ,async(req, res) => {
     try{
         const recipe = await RecipeModel.findById(req.body.recipeID);
         const user = await UserModel.findById(req.body.userID);
@@ -37,7 +37,7 @@ router.put("/", verifyToken ,async(req, res) => {
     }
 });
 
-router.get("/savedRecipes/ids/:userID", async (req, res) => {
+router.get("https://recipe-app-steel-beta.vercel.app/savedRecipes/ids/:userID", async (req, res) => {
     try {
         const user = await UserModel.findById(req.params.userID);
         res.json({ savedRecipes: user?.savedRecipes });
@@ -46,7 +46,7 @@ router.get("/savedRecipes/ids/:userID", async (req, res) => {
     }
 });
 
-router.get("/savedRecipes/:userID", async (req, res) => {
+router.get("https://recipe-app-steel-beta.vercel.app/savedRecipes/:userID", async (req, res) => {
     try {
         const user = await UserModel.findById(req.params.userID);
         const savedRecipes = await RecipeModel.find({

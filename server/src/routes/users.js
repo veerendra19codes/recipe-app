@@ -5,7 +5,7 @@ import { UserModel } from "../models/Users.js";
 
 const router = express.Router();
 
-router.post("/register", async (req, res) => {
+router.post("https://recipe-app-steel-beta.vercel.app/register", async (req, res) => {
     const { username, password } = req.body;
     const user = await UserModel.findOne({username: username});
 
@@ -26,7 +26,7 @@ router.post("/register", async (req, res) => {
     res.json({message: "User Registered Successfully"});
 });
 
-router.post("/login", async (req, res) => {
+router.post("https://recipe-app-steel-beta.vercel.app/login", async (req, res) => {
     const { username, password } = req.body;
     const user = await UserModel.findOne({username: username});
 
