@@ -23,6 +23,6 @@ mongoose.connect(
     "mongodb+srv://veerendrarecipes:mernrecipes1234@recipes.2odttpv.mongodb.net/recipes"
 )
 
-app.listen(3001, (req, res) => {
+app.listen("https://recipe-app-steel-beta.vercel.app/", (req, res) => {
     console.log("server started");
 });
